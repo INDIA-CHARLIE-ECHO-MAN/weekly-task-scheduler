@@ -1,24 +1,25 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
 
-class Environment(BoxLayout):
-    pass
-    """
+class Main_Page(BoxLayout):
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.orientation = "vertical"
-        b1 = Button(text = "Hello")
-        b2 = Button(text = "Bye")
+        super(Main_Page, self).__init__(**kwargs)
+
+        self.orientation = "horizontal"
+        self.box()
+
+    def box(self):
+        b1 = Button(text = "a")
         self.add_widget(b1)
-        self.add_widget(b2)
-    """
 
-class MainWidget(Widget):
-    pass 
 
-class TheLabApp(App):
-    pass
+# Boiler plate
 
-TheLabApp().run()
+class myApp(App):
+    def build(self):
+        return Main_Page()
+
+
+if __name__ == "__main__":
+    myApp().run()
