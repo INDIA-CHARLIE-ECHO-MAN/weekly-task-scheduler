@@ -14,6 +14,6 @@ They can delete the tasks they have made, or organise all the tasks from an open
 | --- | --- | --- | 
 | Add task | Parameters:<li>task(str)<br>Return Values:<li>NULL | Invalid task input |
 | Delete task | Parameters:<li>task(str)<br>Return Values:<li>NULL | Invalid task input |
-| Assign task | Parameters:<li>task(str), list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
-| Rearrange task | Parameters:<li>task(str), position(int)<br>Return Values:<li>NULL | Invalid task input<br>Invalid position input |
+| Assign task | Parameters:<li>task(str)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
+| Rearrange task | Parameters:<li>task(str)<li> position(int)<br>Return Values:<li>NULL | Invalid task input<br>Invalid position input |
 | Reset schedule | Parameters:<li>NULL<br>Return Values:<li>NULL | NULL |
