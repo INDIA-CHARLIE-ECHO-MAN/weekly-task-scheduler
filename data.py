@@ -1,31 +1,31 @@
 data = {
     "Open": [],
-    "Monday": [
+    "Monday": {
         "Open": [],
         "Closed": []
-    ],
-    "Tuesday": [
+    },
+    "Tuesday": {
         "Open": [],
         "Closed": []
-    ],
-    "Wednesday": [
+    },
+    "Wednesday": {
         "Open": [],
         "Closed": []
-    ],
-    "Thursday": [        
+    },
+    "Thursday": {        
         "Open": [],
         "Closed": []
-        ],
-    "Friday": [        
+    },
+    "Friday": {        
         "Open": [],
         "Closed": []
-        ],
-    "Saturday": [       
+    },
+    "Saturday": {       
         "Open": [],
         "Closed": []
-        ],
-    "Sunday": [        
+    },
+    "Sunday": {        
         "Open": [],
         "Closed": []
-        ]
+    }
 }
