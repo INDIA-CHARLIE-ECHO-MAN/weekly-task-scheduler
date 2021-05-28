@@ -12,4 +12,4 @@ They can delete the tasks they have made, or organise all the tasks from an open
 # Table for front end functions
 | Description | Parameter | Return | Exceptions |
 | --- | --- | --- | --- | 
-| Add task | <li>hello<br>bye
+| Add task | parameter:<li>task(str)<li><br>return:<li>NULL<li>
