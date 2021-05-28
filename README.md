@@ -10,6 +10,6 @@ They can delete the tasks they have made, or organise all the tasks from an open
 ![image](https://user-images.githubusercontent.com/43439611/119513677-c499a300-bdb7-11eb-82a0-a25629468d81.png)
 
 # Table for front end functions
-| Description | Parameter | Return | Exceptions |
-| --- | --- | --- | --- | 
-| Add task | parameter:<li>task(str)<li><br>return:<li>NULL<li>
+| Description | Data type| Exceptions |
+| --- | --- | --- | 
+| Add task | Parameters:<li>task(str)<li><br>Return Values:<li>NULL<li>
