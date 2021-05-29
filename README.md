@@ -9,11 +9,11 @@ They can delete the tasks they have made, or organise all the tasks from an open
 # flowchart of functions required to implement the potential functions of the app
 ![image](https://user-images.githubusercontent.com/43439611/119513677-c499a300-bdb7-11eb-82a0-a25629468d81.png)
 
-# Table for Back end functions
+# Table for Backend functions
 | Description | Data type| Exceptions |
 | --- | --- | --- | 
 | Add task | Parameters:<li>task(str)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
 | Delete task | Parameters:<li>index(int)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
 | Assign task | Parameters:<li>index(str)<li>origin(str)<li>to(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid list input |
-| Rearrange task | Parameters:<li>task(str)<li> position(int)<br>Return Values:<li>NULL | Invalid task input<br>Invalid position input |
+| Rearrange task | Parameters:<li>init_pos(str)<li>fin_pos(int)<li>panel(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid panel input |
 | Reset schedule | Parameters:<li>NULL<br>Return Values:<li>NULL | NULL |
