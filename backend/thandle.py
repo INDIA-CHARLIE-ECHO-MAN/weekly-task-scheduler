@@ -3,37 +3,50 @@ from error import InputError
 import data as datafile
 options = ["Open", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-def add_task(task, list):
-    if list not in options:
-        raise InputError("Invalid list input")            
+def input_error(panel):
+    if panel not in options:
+        raise InputError("Invalid panel input")    
 
-    if list == "Open":
-        datafile.data[list].append(task)
+def add_task(task, panel):
+    input_error(panel)          
 
-    else:
-        datafile.data[list]["Open"].append(task)
-
-def delete_task(index, list):
-    if list not in options:
-        raise InputError("Invalid list input")  
-
-    if list == "Open":
-        datafile.data[list].pop(index)
+    if panel == "Open":
+        datafile.data[panel].append(task)
 
     else:
-        datafile.data[list]["Open"].pop(index)
+        datafile.data[panel]["Open"].append(task)
 
-def assign_task(index, origin, to):
-    if origin == "Open":
-        task = datafile.data[origin][index]
+def delete_task(index, panel):
+    input_error(panel)
+
+    if panel == "Open":
+        datafile.data[panel].pop(index)
+
     else:
-        task = datafile.data[origin]['Open'][index]
+        datafile.data[panel]["Open"].pop(index)
+
+def assign_task(index, panel, to):
+    if panel == "Open":
+        task = datafile.data[panel][index]
+    else:
+        task = datafile.data[panel]['Open'][index]
     add_task(task, to)
-    delete_task(index, origin)
+    delete_task(index, panel)
 
 
-def rearrange_task(task, position):
-    pass
+def rearrange_task(init_pos, fin_pos, panel):
+    input_error(panel)
+
+    if panel == "Open":
+        access = datafile.data[panel]
+    
+    else:
+        access = datafile.data[panel]["Open"]
+
+    old = access[init_pos]
+    access[init_pos] = access[fin_pos]
+    access[fin_pos] = old
+    
 
 def reset():
     datafile.data = {

@@ -32,42 +32,18 @@ def assign_task_days(day):
             task = "do this"
             index = 0
             add_task(task, day)
-            access = datafile.data[day]["Open"]
+            if day == "Open":
+                access = datafile.data["Open"]
+            else:
+                access = datafile.data[day]["Open"]
             assign_task(index, day, panel)
             assert len(access) == 0
             assert len(datafile.data[panel]["Open"]) == 1
+            
 
-def test_assign_task_monday():
-    assign_task_days("Monday")
-
-def test_assign_task_tuesday():
-    assign_task_days("Tuesday")
-
-def test_assign_task_wednesday():
-    assign_task_days("Wednesday")
-
-def test_assign_task_thursday():
-    assign_task_days("Thursday")
-
-def test_assign_task_friday():
-    assign_task_days("Friday")
-
-def test_assign_task_saturday():
-    assign_task_days("Saturday")
-
-def test_assign_task_sunday():
-    assign_task_days("Sunday")
-
-def test_assign_task_open():
-    for panel in panels_list:
-        task = "do this"
-        move = "Open"
-        index = 0
-        add_task(task, panel)
-        access = datafile.data[panel]["Open"]
-        assign_task(index, panel, move)
-        assert len(access) == 0
-        assert len(datafile.data[move]) == 1
+def test_assign_task_days():
+    for day in panels_list:
+        assign_task_days(day)
         reset()
 
 """
