@@ -9,7 +9,7 @@ They can delete the tasks they have made, or organise all the tasks from an open
 # flowchart of functions required to implement the potential functions of the app
 ![image](https://user-images.githubusercontent.com/43439611/119513677-c499a300-bdb7-11eb-82a0-a25629468d81.png)
 
-# Table for front end functions
+# Table for Back end functions
 | Description | Data type| Exceptions |
 | --- | --- | --- | 
 | Add task | Parameters:<li>task(str)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
