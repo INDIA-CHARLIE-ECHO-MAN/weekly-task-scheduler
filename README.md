@@ -12,8 +12,8 @@ They can delete the tasks they have made, or organise all the tasks from an open
 # Table for front end functions
 | Description | Data type| Exceptions |
 | --- | --- | --- | 
-| Add task | Parameters:<li>task(str)<br>Return Values:<li>NULL | Invalid task input |
-| Delete task | Parameters:<li>task(str)<br>Return Values:<li>NULL | Invalid task input |
-| Assign task | Parameters:<li>task(str)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
+| Add task | Parameters:<li>task(str)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
+| Delete task | Parameters:<li>index(int)<li>list(str)<br>Return Values:<li>NULL | Invalid task input<br>Invalid list input |
+| Assign task | Parameters:<li>index(str)<li>origin(str)<li>to(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid list input |
 | Rearrange task | Parameters:<li>task(str)<li> position(int)<br>Return Values:<li>NULL | Invalid task input<br>Invalid position input |
 | Reset schedule | Parameters:<li>NULL<br>Return Values:<li>NULL | NULL |
