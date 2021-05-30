@@ -46,7 +46,16 @@ def rearrange_task(init_pos, fin_pos, panel):
     old = access[init_pos]
     access[init_pos] = access[fin_pos]
     access[fin_pos] = old
-    
+
+def close_task(index, panel):
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    if panel not in days:
+        raise InputError("Invalid panel input")
+
+    access = datafile.data[panel]["Closed"]
+    task = datafile.data[panel]["Open"][index]
+    delete_task(index, panel)
+    access.append(task)
 
 def reset():
     datafile.data = {
