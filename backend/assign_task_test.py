@@ -4,7 +4,6 @@
 from error import InputError
 import pytest 
 from thandle import add_task
-from thandle import delete_task
 from thandle import assign_task
 from thandle import reset
 import data as datafile
