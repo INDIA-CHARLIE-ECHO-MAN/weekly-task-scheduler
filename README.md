@@ -17,3 +17,4 @@ They can delete the tasks they have made, or organise all the tasks from an open
 | Assign task | Parameters:<li>index(str)<li>origin(str)<li>to(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid list input |
 | Rearrange task | Parameters:<li>init_pos(str)<li>fin_pos(int)<li>panel(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid panel input |
 | Reset schedule | Parameters:<li>NULL<br>Return Values:<li>NULL | NULL |
+| Close task | Parameters:<li>index(int)<li>panel(str)<br>Return Values:<li>NULL | Invalid index input<br>Invalid panel input| 
