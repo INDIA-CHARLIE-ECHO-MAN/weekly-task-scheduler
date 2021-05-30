@@ -21,8 +21,8 @@ Following tests below checks if tasks assigned to days can be closed.
 panels_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 def test_close_task():
-    task1 = "to do"
-    task2 = "to do"
+    task1 = "to do1"
+    task2 = "to do2"
     for day in panels_list:
         add_task(task1, day)
         add_task(task2, day)

@@ -1,6 +1,7 @@
 """Tests delete_task function
 
 """
+from thandle import close_task
 from error import InputError
 import pytest 
 from thandle import add_task
@@ -162,3 +163,18 @@ def test_delete_task_bad_list():
 
     with pytest.raises(InputError):
         delete_task(1, "Hello")
+
+def test_delete_task_closed():
+    task1 = "to do1"
+    task2 = "to do2"
+    panels_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    for day in panels_list:
+        add_task(task1, day)
+        add_task(task2, day)
+        close_task(1, day)
+        close_task(0, day)
+        delete_task(0, day, False)
+        assert len(datafile.data[day]["Closed"]) == 1
+        delete_task(0, day, False)
+        assert len(datafile.data[day]["Closed"]) == 0
+

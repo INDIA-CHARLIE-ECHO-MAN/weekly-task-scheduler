@@ -16,14 +16,17 @@ def add_task(task, panel):
     else:
         datafile.data[panel]["Open"].append(task)
 
-def delete_task(index, panel):
+def delete_task(index, panel, status):
     input_error(panel)
+    status = bool(status)
+    if status == True:
+        if panel == "Open":
+            datafile.data[panel].pop(index)
 
-    if panel == "Open":
-        datafile.data[panel].pop(index)
-
+        else:
+            datafile.data[panel]["Open"].pop(index)
     else:
-        datafile.data[panel]["Open"].pop(index)
+        datafile.data[panel]["Closed"].pop(index)
 
 def assign_task(index, panel, to):
     if panel == "Open":
@@ -31,7 +34,7 @@ def assign_task(index, panel, to):
     else:
         task = datafile.data[panel]['Open'][index]
     add_task(task, to)
-    delete_task(index, panel)
+    delete_task(index, panel, True)
 
 
 def rearrange_task(init_pos, fin_pos, panel):
@@ -54,7 +57,7 @@ def close_task(index, panel):
 
     access = datafile.data[panel]["Closed"]
     task = datafile.data[panel]["Open"][index]
-    delete_task(index, panel)
+    delete_task(index, panel, True)
     access.append(task)
 
 def reset():
